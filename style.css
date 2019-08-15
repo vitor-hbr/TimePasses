@@ -1,0 +1,53 @@
+body {
+    font: normal 15pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    height: 450px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.089);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+ 
+  img.opaque {
+    opacity:1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+  }
+
+.img {
+    position: absolute;
+    float: left;
+    left: 10%; 
+    max-width: 400px;
+    max-height: 400px;
+    opacity:0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+
+#image {
+    align-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+div {
+    position: relative;
+    text-align: center;
+    padding-bottom: 4%;
+}
