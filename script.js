@@ -15,7 +15,7 @@ var td;
 var per;
 
 getElements();
-setTimeout(load, 1000);
+setInterval(load, 1000);
 
 function load() {
     getTime();
