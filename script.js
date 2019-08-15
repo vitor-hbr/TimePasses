@@ -43,7 +43,7 @@ function getTime() {
 
 function handleColorAndOpacityChange(indexEnd, indexFrom, indexTo, colorFrom, colorTo) {
     imgs[indexEnd].style.opacity = 0;
-    td = calcdif(hour, min, sec, indexFrom);
+    td = calcDif(hour, min, sec, indexFrom);
     per = 1 - (td / (7*3600));
     imgs[indexFrom].style.opacity = 1 - per;
     imgs[indexTo].style.opacity = per;
@@ -61,7 +61,7 @@ function toHex(n) {
         + "0123456789ABCDEF".charAt(n % 16);
 }
 
-function calcdif(hour, min, sec, timeIndex) {
+function calcDif(hour, min, sec, timeIndex) {
     var t = 0;
     switch (timeIndex) {
         case 0:
