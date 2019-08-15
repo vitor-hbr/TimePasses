@@ -41,14 +41,14 @@ function getTime() {
     sec  = date.getSeconds();
 }
 
-function handleColorAndOpacityChange(indexEnd, indexFrom, indexTo, timeFrom, timeTo) {
+function handleColorAndOpacityChange(indexEnd, indexFrom, indexTo, colorFrom, colorTo) {
     imgs[indexEnd].style.opacity = 0;
     td = calcdif(hour, min, sec, indexFrom);
     per = 1 - (td / (7*3600));
     imgs[indexFrom].style.opacity = 1 - per;
     imgs[indexTo].style.opacity = per;
-    body.style.background = `#${rgbToHex(timeFrom.r*(1-per) + timeTo.r*per, timeFrom.g*(1-per) +
-        timeTo.g*per, timeFrom.b*(1-per) + timeTo.b*per)}`;
+    body.style.background = `#${rgbToHex(colorFrom.r*(1-per) + colorTo.r*per, colorFrom.g*(1-per) +
+        colorTo.g*per, colorFrom.b*(1-per) + colorTo.b*per)}`;
 }
 
 function rgbToHex(R, G, B) { return toHex(R) + toHex(G) + toHex(B) }
@@ -61,9 +61,9 @@ function toHex(n) {
         + "0123456789ABCDEF".charAt(n % 16);
 }
 
-function calcdif(hour, min, sec, timeFrom) {
+function calcdif(hour, min, sec, timeIndex) {
     var t = 0;
-    switch (timeFrom) {
+    switch (timeIndex) {
         case 0:
             t = (3600*13) - (hour*3600 + min*60 + sec);
             break;
