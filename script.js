@@ -5,7 +5,7 @@ var night = { r: 2, g: 2, b: 68};
 var StartTime = true;
 
 
-function carregar() {
+function load() {
     var body = window.document.getElementById("body");
     var msg = window.document.getElementById("msg");
     var imgs = window.document.querySelectorAll("img");
