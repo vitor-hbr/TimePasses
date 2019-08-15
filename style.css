@@ -22,8 +22,12 @@ footer {
     text-align: center;
     font-style: italic;
 }
- 
-  img.opaque {
+
+h1 {
+    font-weight: bold;
+}
+
+img.opaque {
     opacity:1;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=1);
@@ -44,6 +48,11 @@ footer {
     align-content: center;
     align-items: center;
     padding: 10px;
+}
+
+#msg {
+    color: #585858;
+    font-weight: bold;
 }
 
 div {
